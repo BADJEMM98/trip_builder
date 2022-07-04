@@ -1,0 +1,48 @@
+// DONNEES A ENVOYER AU BACK-END PAR POST
+{
+    "cities":
+    {
+        "Paris":[48.49,-54.84],
+        "Montpellier":[48.49,-54.84],
+        "Nîmes":[48.49,-54.84]
+    },
+    "dates":{
+        "start":"10-12-2022",
+        "end":"30-01-2023"
+    },
+    "budget": 500,
+    "uid":8795465
+}
+
+//DONNEES A RECEVOIR EN FRONT-END
+
+{
+    "trajet1":{
+        "start_city": "Paris",
+        "end_city": "Montpellier",
+        "start_date": "10-12-2022",
+        "end_date":"10-12-2022",
+        "transport":{
+
+        },
+    },
+    "trajet2":{
+        "start_city": "Montpellier",
+        "end_city": "Nîmes",
+        "start_date": "10-01-2023",
+        "end_date":"11-01-2023",
+        "transport":{
+
+        },
+    },
+    "trajet3":{
+        "start_city": "Nîmes",
+        "end_city": "Paris",
+        "start_date": "29-01-2023",
+        "end_date":"30-01-2023",
+        "transport":{
+
+        },
+    },
+    "cost":500
+}

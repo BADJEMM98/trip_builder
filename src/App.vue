@@ -13,6 +13,9 @@
         <router-link to="/sign-in">Login</router-link>
       </span>
     </nav>
+    <div class="header">
+      <img src="@/assets/logo.svg" alt="logo" />
+    </div>
     <router-view />
   </div>
 </template>
@@ -21,19 +24,19 @@
 import { getAuth, onAuthStateChanged, signOut } from "@firebase/auth";
 import { ref } from "@vue/reactivity";
 import { useRouter } from "vue-router";
-  const router = useRouter();
-  const isLoggedIn = ref(true);
-  const auth = getAuth();
-  onAuthStateChanged(auth, function(user) {
-    if (user) {
-      isLoggedIn.value = true;
-    } else {
-      isLoggedIn.value = false;
-      }
-  });
-  
-  const signOutCallback = () => {
-    signOut(auth);
-    router.push('/');
+const router = useRouter();
+const isLoggedIn = ref(true);
+const auth = getAuth();
+onAuthStateChanged(auth, function (user) {
+  if (user) {
+    isLoggedIn.value = true;
+  } else {
+    isLoggedIn.value = false;
   }
+});
+
+const signOutCallback = () => {
+  signOut(auth);
+  router.push("/");
+};
 </script>
